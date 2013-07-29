@@ -9,3 +9,12 @@
 <%= link_to "Delete Topic", topic_path(@topic),
             method: :delete, confirm: "Are you SURE you want to delete this topic?" %>
 <%= link_to "New Step", new_topic_step_path(@topic) %>
+
+<ul id='steps'>
+  <% @topic.steps.each do |step| %>
+    <li>
+      #<%= step.id %> -
+      <%= link_to step.description, [@topic, step] %>
+    </li>
+  <% end %>
+</ul>

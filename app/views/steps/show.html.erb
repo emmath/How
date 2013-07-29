@@ -2,3 +2,4 @@
   <h2><%= @step.description %></h2>
   <%= simple_format(@step.description) %>
 </div>
+<%= link_to "Edit Step", [:edit, @topic, @step] %>
